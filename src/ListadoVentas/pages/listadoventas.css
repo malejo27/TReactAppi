@@ -1,0 +1,117 @@
+#container h1{
+    font-size:1.25rem;
+    font-weight: 500;
+    margin: 30px;
+}
+
+.tabla1{
+    border-collapse: collapse;
+    font-size: 12pt;
+   
+    width: 100%;
+}
+.tabla1 th{
+    text-align: left;
+    padding: 10px;
+    background: #fff; 
+    color: darkgray;
+    border: darkgrey 0.5px solid;
+}
+
+.tabla1 tr:nth-child(odd){
+    background: #fff;
+}
+.tabla1 td{
+    padding: 10px;
+}
+
+.paginador ul{
+    padding: 15px;
+    list-style:none;
+    background: #fff;
+    margin-top: 15px;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display:-ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content: flex-end;
+    }
+.paginador a, .pageSelected{
+    color: #428bca;
+    border: 1px solid #ddd;
+    padding: 5px;
+    display: inline-block;
+    font-size: 14px;
+    text-align: center;
+    width: 35px;
+}
+.paginador a:hover{
+    background: #ddd;
+}
+.pageSelected{
+    color: #fff;
+    background: #4482fc;
+    border:1px solid #4482fc;
+   
+   
+   
+}
+
+.form-search-date{
+    padding: 10px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-radius: 10px;
+    margin: 10px auto;
+}
+.form-search-date label{
+    margin: 0 10px;
+}
+.form-search-date input{
+    width: auto;
+    color: gray;
+}
+.form-search-date .btn-view{
+    padding: 8px;
+}
+.btn-view{
+    background-color: #4482fc;
+    border: 0;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 10px;
+    margin: 0 3px;
+    color: #fff;
+}
+.btn-view img{
+    height: 17px;
+    width:15px;
+}
+.btn-edit-venta{
+    background-color: #f26b6b;
+    border: 0;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 10px;
+    margin: 0 3px;
+    color: #fff;  
+}
+.btn-delete-venta{
+    background-color: forestgreen;
+    border: 0;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 10px;
+    margin: 0 3px;
+    color: #fff;      
+}
+.btn-edit-venta img{
+    height: 17px;
+    width: 15px;
+}
+.btn-delete-venta img{
+    height: 17px;
+    width:15px;
+}

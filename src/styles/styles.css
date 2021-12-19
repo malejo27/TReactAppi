@@ -1,0 +1,178 @@
+.logo{
+    height: 80px;
+    width: 100px;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+  }
+
+ul {
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    margin: 0px;
+}
+
+
+.navbar {
+    height: 60px;
+    display: flex;
+    justify-content:stretch;
+    padding: 0px;
+    background-color: rgba(224, 233, 233, 0.719);
+    border-bottom: 1px solid rgb(39, 33, 33);
+    box-shadow: 1px 1px rgb(230, 227, 227);
+  } 
+  
+.navbar > li {
+    display: flex;
+    align-items: center;
+  }
+
+
+
+.titulo{
+   font-weight: 500;
+   font-size: 1.25rem;
+}
+
+.contenedor-titulo{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    height: 70px;
+}
+
+
+.contenedor-span{     
+    margin-top: 3%;
+    display: flex;
+    justify-content: space-around;
+   
+}
+
+
+.fechaPago{
+    color: black;    
+    font-weight: 600;   
+}
+
+.spanTexto{
+    color: black;    
+    font-weight: 600;
+}
+
+.InputfechaDePago{
+    background-color: white;
+    border: 1px solid gray;
+    padding: 4px;
+    border-radius: 8px;
+    
+}
+
+.contenedorAgregarProducto{
+    display: flex;
+    justify-content: center;
+    margin-top: 4.5%;
+    margin-left: 10%;
+    width: 80%;
+    
+   
+}
+
+
+.buscar {
+    background-color: white;
+    border: 1px solid gray;
+    padding: 4px;
+    border-radius: 8px;
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  #inputBuscar{
+      width: 100%;
+  }
+
+  
+
+.cantidad{
+    background-color: white;
+    border: 1px solid gray;
+    padding: 4px;
+    border-radius: 8px;
+    margin-left: 1%;
+}
+
+.btnAgregarProducto{
+    background-color: white;
+    border: 1px solid gray;
+    padding: 4px;
+    border-radius: 8px;
+    margin-left: 1%;
+}
+
+.btnAgregarProducto:hover {
+    background-color: #c1c4c1; 
+    color: white;
+  }
+
+  .mainContainer{
+     min-height:calc(100vh - 200px);
+  }
+
+  .contenedorFooter{
+      background-color:rgb(13, 110, 253);
+      height: 80px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 3%;
+      
+  }
+
+  .textoFooter{
+      font-size: 100%;
+      font-weight: 800;
+      text-decoration-color: aliceblue;
+  }
+
+
+
+.LabelvalorTotal{
+    color: black;    
+    font-weight: 600;   
+}
+
+.InputValorTotal{
+    background-color: white;
+    border: 1px solid gray;
+    padding: 4px;
+    border-radius: 8px;
+    margin-left: 1%;
+    
+}
+
+
+.BtnGuardar{
+    background-color: white;
+    border: 1px solid gray;
+    padding: 4px;
+    border-radius: 8px;
+    margin-left: 1%;
+}
+
+.BtnGuardar:hover {
+    background-color: #c1c4c1; 
+    color: white;
+  }
+
+.valorTotal{
+    display: flex;
+    justify-content: center;
+}
