@@ -1,4 +1,4 @@
-.logo{
+.logito{
     height: 80px;
     width: 100px;
 }
@@ -74,7 +74,7 @@ body {
     
 }
 
-.contenedorAgregarProducto{
+.contenedorAgregarProyecto{
     display: flex;
     justify-content: center;
     margin-top: 4.5%;
@@ -109,7 +109,7 @@ body {
     margin-left: 1%;
 }
 
-.btnAgregarProducto{
+.btnAgregarProyecto{
     background-color: white;
     border: 1px solid gray;
     padding: 4px;
@@ -117,7 +117,7 @@ body {
     margin-left: 1%;
 }
 
-.btnAgregarProducto:hover {
+.btnAgregarProyecto:hover {
     background-color: #c1c4c1; 
     color: white;
   }

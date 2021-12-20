@@ -16,9 +16,12 @@ const GestionUsuarios = ({usuarios, setUsuarios}) => {
     const [newUsuario, setNewUsuario] = useState({
         
         nombre: "",
-        email: "",
-        activo: false,
+        apellido: "",
+        identificacion: "",
+        correo: "",
         rol: "",
+        estado: false,
+        
         
     });
     const handleChange = (event) => {
@@ -70,24 +73,26 @@ const GestionUsuarios = ({usuarios, setUsuarios}) => {
                                 <Form.Group className="mb-3" controlId="formNombres">
                                     <Form.Label>Nombre</Form.Label>
                                     <Form.Control type= "text" name = "nombre" 
-                                     onChange={handleChange} placeholder="Ingrese Nombres y Apellidos" />
+                                     onChange={handleChange} placeholder="Ingrese Nombres " />
                                 </Form.Group>
                                 <Form.Group className="mb-3" controlId="formNombres">
-                                    <Form.Label>Email</Form.Label>
-                                    <Form.Control type= "text" name = "email"
-                                     onChange={handleChange} placeholder="Ingrese email" />
+                                    <Form.Label>Apellido</Form.Label>
+                                    <Form.Control type= "text" name = "apellido" 
+                                     onChange={handleChange} placeholder="Ingrese Apellidos" />
+                                </Form.Group>
+                                <Form.Group className="mb-3" controlId="formNombres">
+                                    <Form.Label>Identificacion</Form.Label>
+                                    <Form.Control type= "number" name = "identificacion" 
+                                     onChange={handleChange} placeholder="Ingrese numero de identificación" />
+                                </Form.Group>
+                                
+            
+                                <Form.Group className="mb-3" controlId="formNombres">
+                                    <Form.Label>Correo</Form.Label>
+                                    <Form.Control type= "text" name = "correo"
+                                     onChange={handleChange} placeholder="Ingrese correo electronico" />
                                 </Form.Group>
 
-
-                                {/* <Form.Group as={Col} controlId="formestado">
-                                        <Form.Label>Activo</Form.Label>
-                                        <Form.Select type= "Boolean" name = "estado"  onChange={handleChange} 
-                                        defaultValue="Seleccione...">
-                                           <option selected disabled>Seleccione una opcion</option> 
-                                            <option>true</option>
-                                            <option>false</option>
-                                        </Form.Select>
-                                </Form.Group> */}
 
                                 <Row className="mb-3">                                    
 
@@ -96,8 +101,9 @@ const GestionUsuarios = ({usuarios, setUsuarios}) => {
                                         <Form.Select type= "text" name = "rol"  onChange={handleChange} 
                                         >
                                             <option selected disabled>Seleccione una opcion</option> 
+                                            <option>Lider</option>
                                             <option>Admin</option>
-                                            <option>Vendedor</option>
+                                            <option>Estudiante</option>
                                         </Form.Select>
                                     </Form.Group>
                                     <Form.Group className="mb-3" controlId="formBasicEmail">

@@ -24,11 +24,12 @@ return(
           <thead>
             <tr className="text-center">
               <th>Nombre</th>
-              <th>Email</th>
-              <th>Estado</th>
+              <th>Apellido</th>
+              <th>Identificacion</th>
+              <th>Correo</th>
               <th>Rol</th>
-              {/*<th>Clave</th>
-              <th>Usuario</th>*/}
+              <th>Estado</th>
+              
             </tr>
           </thead>
           <tbody>
@@ -36,13 +37,12 @@ return(
               return (
                 <tr className="text-center" key={usuario._id}>
                   <td>{usuario.nombre}</td>
-                  <td>{usuario.email}</td>
+                  <td>{usuario.apellido}</td>
+                  <td>{usuario.identificacion}</td>
+                  <td>{usuario.correo}</td>
+                  <td>{usuario.rol}</td> 
                   {/* <td>{usuario.estado}</td> */}
-                  <td>{usuario.rol}</td> 
-                  {/*<td>{usuario.clave}</td>
-                  <td>{usuario.rol}</td> 
-                  <td>{usuario.estado}</td>
-                  <td>{usuario.usuario}</td>*/}
+                  
                   <td>
                     <input
                       type="checkbox"

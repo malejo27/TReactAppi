@@ -12,9 +12,12 @@ const EditarUsuario = ({ usuarios, setUsuarios }) => {
 
   const [newUsuario, setNewUsuario] = useState({
     nombre: "", 
-    email: "",
-    activo: false,     
+    apellido: "",
+    identificacion: "",
+    correo: "",
     rol: "",
+    estado: false,     
+    
     
     
   });

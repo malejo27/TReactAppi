@@ -3,64 +3,62 @@ import React, {useState} from "react";
 import { Container, Table, Button, Col, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import api from '../../api';
-import BusquedaProductos from "../components/BusquedaProductos"
+import BusquedaProyectos from "../components/BusquedaProyectos"
 
-const ListadoProductos = ({productos, setProductos}) => { 
+const ListadoProyectos = ({proyectos, setProyectos}) => { 
  // const[productosGestion, setProductosGestion] = useState([...productos]);
   
-  const deleteProducto = (event) => {
+  const deleteProyecto = (event) => {
     const id = event.target.id;
-    api.products.delete(id);
-    console.log(productos);
-    const newProducts = productos.filter(
-      (producto) => producto._id !== id);
-    setProductos([...newProducts]);
+    api.proyects.delete(id);
+    console.log(proyectos);
+    const newProyects = proyectos.filter(
+      (proyecto) => proyecto._id !== id);
+    setProyectos([...newProyects]);
 };
 
 return(
     <div>
-      <h3 className=" form.control text-center mt-5 mb-5">Listado de productos</h3>
+      <h3 className=" form.control text-center mt-5 mb-5">Listado de proyectos</h3>
       <Container>
         <Row className = "mb-5  align-items-center justify-content-center ">
         <Form.Label column="lg" lg={3}>
-          Buscador de productos:
+          Buscador de proyectos:
         </Form.Label>
           <Col xs={4}> 
-            <BusquedaProductos productos={productos} setProductos={setProductos}/>
+            <BusquedaProyectos proyectos={proyectos} setProyectos={setProyectos}/>
           </Col>
         </Row>
         <Table striped bordered hover>
           <thead>
             <tr className="text-center">
-              <th>Nombre</th>
-              <th>Marca</th>
-              <th>Modelo</th>
-              <th>Cilindraje</th>
-              <th>Categoria</th>
-              <th>Disponible</th>
-              <th>Acción</th>
+              <th>Nombre Proyecto</th>
+              <th>Objetivo</th>
+              <th>Presupuesto</th>
+              <th>Fecha Inicio</th>
+              <th>Fecha Fin</th>
             </tr>
           </thead>
           <tbody>
-            {productos.map((producto) => {
+            {proyectos.map((proyecto) => {
               return (
-                <tr className="text-center" key={producto._id}>
-                  <td>{producto.title}</td>
-                  <td>{producto.marca}</td>
-                  <td>{producto.modelo}</td>
-                  <td>{producto.cilindraje}</td>
-                  <td>{producto.categoria}</td>
+                <tr className="text-center" key={proyecto._id}>
+                  <td>{proyecto.title}</td>
+                  <td>{proyecto.objetivo}</td>
+                  <td>{proyecto.presupuesto}</td>
+                  <td>{proyecto.fechaInicio}</td>
+                  <td>{proyecto.fechaFin}</td>
                   <td>
                     <input
                       type="checkbox"
                       className="custom-control-input text-center"
                       id="customCheck1"
-                      checked={producto.disponible}
+                      checked={proyecto.disponible}
                       readOnly
                     />{" "}
                   </td>
                   <td>
-                  <Link to={`/ListadoProductos/Edit/${producto._id}`}>
+                  <Link to={`/ListadoProyectos/Edit/${proyecto._id}`}>
                     <Button
                       variant="warning"
                       //onClick={popProduct}
@@ -82,8 +80,8 @@ return(
 
                     <Button
                       variant="danger"
-                      onClick={deleteProducto}
-                      id={producto._id}
+                      onClick={deleteProyecto}
+                      id={proyecto._id}
                       className="ms-2"
                     >
                       <svg
@@ -113,4 +111,4 @@ return(
 )
 };
 
-export default ListadoProductos;
+export default ListadoProyectos;

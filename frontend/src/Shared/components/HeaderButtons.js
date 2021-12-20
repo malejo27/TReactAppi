@@ -34,27 +34,15 @@ const HeaderButtons = ({isLoggedIn, setLogin, setIsAdmin}) => {
         return(
             <React.Fragment>
                 
-                <Link to="/RegistroProductos"> 
+                <Link to="/RegistroProyectos"> 
                     <Button variant="primary" className="me-3">
-                    Registro Productos
+                    Registro Proyectos
                     </Button>
                 </Link>
 
-                <Link to="/ListadoProductos"> 
+                <Link to="/ListadoProyectos"> 
                     <Button variant="primary" className="me-3">
-                    Listado Productos
-                    </Button>
-                </Link>
-
-                <Link to="/RegistroVentas"> 
-                    <Button variant="primary" className="me-3">
-                    Registro Ventas
-                    </Button>
-                </Link>
-
-                <Link to="/ListadoVentas"> 
-                    <Button variant="primary" className="me-3">
-                    Listado Ventas
+                    Listado Proyectos
                     </Button>
                 </Link>
 

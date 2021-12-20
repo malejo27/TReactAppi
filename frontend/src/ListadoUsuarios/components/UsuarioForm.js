@@ -5,26 +5,6 @@ const UsuarioForm = ({ handleChange, handleClick, formValue }) => {
   return (
     <Form>
 
-     {/*<Form.Group className="mb-3">
-        <Form.Label>Usuario</Form.Label>
-        <Form.Control
-          type="text"
-          name="usuario"
-          onChange={handleChange}
-          value={formValue.usuario}
-        />
-      </Form.Group>
-
-      <Form.Group className="mb-3">
-        <Form.Label>contraseña</Form.Label>
-        <Form.Control
-          type="text"
-          name="clave"
-          onChange={handleChange}
-          value={formValue.clave}
-        />
-      </Form.Group> */}
-
       <Form.Group className="mb-3">
         <Form.Label>Nombre</Form.Label>
         <Form.Control
@@ -36,24 +16,34 @@ const UsuarioForm = ({ handleChange, handleClick, formValue }) => {
       </Form.Group>
 
       <Form.Group className="mb-3">
-        <Form.Label>Email</Form.Label>
+        <Form.Label>Apellido</Form.Label>
         <Form.Control
           type="text"
-          name="email"
+          name="apellido"
           onChange={handleChange}
-          value={formValue.email}
+          value={formValue.apellido}
         />
       </Form.Group>
 
-      {/* <Form.Group className="mb-3">
-        <Form.Label>Estado</Form.Label>
+      <Form.Group className="mb-3">
+        <Form.Label>Identificacion</Form.Label>
+        <Form.Control
+          type="number"
+          name="identificacion"
+          onChange={handleChange}
+          value={formValue.identificacion}
+        />
+      </Form.Group>
+
+      <Form.Group className="mb-3">
+        <Form.Label>Correo</Form.Label>
         <Form.Control
           type="text"
-          name="estado"
+          name="correo"
           onChange={handleChange}
-          value={formValue.estado}
+          value={formValue.correo}
         />
-      </Form.Group> */}
+      </Form.Group>
 
       <Form.Group className="mb-3">
         <Form.Label>Rol</Form.Label>

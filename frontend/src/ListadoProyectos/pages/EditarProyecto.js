@@ -2,59 +2,59 @@ import React, { useState, useEffect } from "react";
 import { useParams, useHistory } from "react-router-dom";
 import { Container, Row, Col, Alert } from "react-bootstrap";
 import api from "../../api";
-import VentasForm from "../components/VentasForm";
+import ProyectForm from "../components/ProyectForm";
 
-const EditarVenta = ({ ventas, setVentas }) => {
+const EditarProyecto = ({ proyectos, setProyectos }) => {
   const history = useHistory();
   const [error, setError] = useState();
   const [success, setSuccess] = useState();
-  const { ventaId } = useParams();
+  const { proyectId } = useParams();
 
-  const [newVenta, setNewVenta] = useState({
-    id: "",
-    nonmbreVendedor: "",
-    nonmbreCliente: "",
-    fechaPago: "",
-    valorTotal: "",
+  const [newProyect, setNewProyect] = useState({
+    title: "",
+    objetivos: "",
+    presupuesto: "",
+    fechaInicio: "",
+    fechaFin: "",
   });
 
   useEffect(() => {
     const fetchData = async () => {
-      const response = await api.ventas.getVentas(ventaId);
-      setNewVenta(response);
+      const response = await api.proyects.getProyect(proyectId);
+      setNewProyect(response);
     };
 
     fetchData();
-  }, [ventaId]);
+  }, [proyectId]);
 
   const handleChange = (event) => {
-    setNewVenta({ ...newVenta, [event.target.name]: event.target.value });
+    setNewProyect({ ...newProyect, [event.target.name]: event.target.value });
   };
 
   const handleClick = async () => {
-    const apiResponse = await api.ventas.edit(newVenta);
+    const apiResponse = await api.proyects.edit(newProyect);
     if (apiResponse.err) {
       setError(apiResponse.err.message);
       console.log(apiResponse.err);
     } else {
       setSuccess(apiResponse);
-      setVentas([...ventas, newVenta]);
-      history.push("/ListadoVentas");
+      setProyectos([...proyectos, newProyect]);
+      history.push("/ListadoProyectos");
     }
   };
 
   return (
     <React.Fragment>
-      <h3 className="text-center mt-5 mb-5">Editar ventas</h3>
+      <h3 className="text-center mt-5 mb-5">Editar proyectos</h3>
       <Container>
         <Row className="d-flex justify-content-center align-items-center">
           <Col xs={6}>
             {error && <Alert variant="danger">{error}</Alert>}
             {success && <Alert variant="success">{success}</Alert>}
-            <VentasForm
+            <ProyectForm
               handleChange={handleChange}
               handleClick={handleClick}
-              formValue={newVenta}
+              formValue={newProyect}
             />
           </Col>
         </Row>
@@ -63,4 +63,4 @@ const EditarVenta = ({ ventas, setVentas }) => {
   );
 };
 
-export default EditarVenta;
+export default EditarProyecto;

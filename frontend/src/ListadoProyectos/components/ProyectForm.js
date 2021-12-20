@@ -1,48 +1,59 @@
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 
-const VentasForm = ({ handleChange, handleClick, formValue }) => {
+const ProyectForm = ({ handleChange, handleClick, formValue }) => {
   return (
     <Form>
      <Form.Group className="mb-3">
-        <Form.Label>Vendedor</Form.Label>
+        <Form.Label>Nombre Proyecto</Form.Label>
         <Form.Control
           type="text"
-          name="nombreVendedor"
+          name="title"
           onChange={handleChange}
-          value={formValue.nombreVendedor}
+          value={formValue.title}
         />
       </Form.Group>
 
       <Form.Group className="mb-3">
-        <Form.Label>Cliente</Form.Label>
+        <Form.Label>Objetivo</Form.Label>
         <Form.Control
           type="text"
-          name="nombreCliente"
+          name="objetivo"
           onChange={handleChange}
-          value={formValue.nombreCliente}
+          value={formValue.objetivo}
         />
       </Form.Group>
 
       <Form.Group className="mb-3">
-        <Form.Label>Fecha de Venta</Form.Label>
-        <Form.Control
-          type="Date"
-          name="fechaVenta"
-          onChange={handleChange}
-          value={formValue.fechaVenta}
-        />
-      </Form.Group>
-
-      <Form.Group className="mb-3">
-        <Form.Label>Valor total ($)</Form.Label>
+        <Form.Label>Presupuesto</Form.Label>
         <Form.Control
           type="number"
-          name="valorTotal"
+          name="presupuesto"
           onChange={handleChange}
-          value={formValue.valorTotal}
+          value={formValue.presupuesto}
+        />
+      </Form.Group>       
+
+      <Form.Group className="mb-3">
+        <Form.Label>Fecha de Inicio</Form.Label>
+        <Form.Control
+          type="Date"
+          name="fechaInicio"
+          onChange={handleChange}
+          value={formValue.fechaInicio}
         />
       </Form.Group>
+
+      <Form.Group className="mb-3">
+        <Form.Label>Fecha de Fin</Form.Label>
+        <Form.Control
+          type="Date"
+          name="fechaFin"
+          onChange={handleChange}
+          value={formValue.fechaFin}
+        />
+      </Form.Group>
+      
 
       <Button type="button" variant="outline-secondary">
         Cancelar
@@ -59,4 +70,4 @@ const VentasForm = ({ handleChange, handleClick, formValue }) => {
   );
 };
 
-export default VentasForm;
+export default ProyectForm;

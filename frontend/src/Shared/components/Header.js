@@ -8,7 +8,7 @@ const Header = ({ isLoggedIn, login, setIsAdmin}) => {
     return (
        <Navbar bg="primary" variant="dark">
             <Container>
-            <Navbar.Brand href="/">Assembly</Navbar.Brand>
+            <Navbar.Brand href="/">TReact</Navbar.Brand>
                 <Nav className="justify-content-end">
                     <HeaderButtons
                         isLoggedIn={isLoggedIn}
