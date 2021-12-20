@@ -7,13 +7,17 @@ const callApi = async (url, options = {}) => {
     };
     
     const response = await fetch(
-        "http://localhost:8888" + url, options);
+        "http://localhost:3001/api" + url, options);
         // process.env.REACT_BACKEND_URL +url, options);
     const data = await response.json();
     return data;
 };
 
+
+
 const api = {
+
+
     products: {
         list() {
             return callApi("/productos");
