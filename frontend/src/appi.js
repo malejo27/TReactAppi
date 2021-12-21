@@ -7,41 +7,45 @@ const callApi = async (url, options = {}) => {
     };
     
     const response = await fetch(
-        "http://localhost:8888" + url, options);
+        "http://localhost:3001/api" + url, options);
         // process.env.REACT_BACKEND_URL +url, options);
     const data = await response.json();
     return data;
 };
 
+
+
 const api = {
-    proyects: {
+
+
+    products: {
         list() {
-            return callApi("/proyectos");
+            return callApi("/productos");
         },
-        create(proyecto) {
-            console.log(JSON.stringify(proyecto));
-            return callApi("/proyectos", {
+        create(producto) {
+            console.log(JSON.stringify(producto));
+            return callApi("/productos", {
                 method: "POST", 
-                body: JSON.stringify(proyecto),
+                body: JSON.stringify(producto),
             });
         },
        
         delete(id){
-            return callApi(`/proyectos/${id}`, {
+            return callApi(`/productos/${id}`, {
                 method: "DELETE",
             });
         },
-        edit(proyecto) {
-            return callApi(`/proyectos/${proyecto._id}`, {
+        edit(producto) {
+            return callApi(`/productos/${producto._id}`, {
               method: "PUT",
-              body: JSON.stringify(proyecto),
+              body: JSON.stringify(producto),
             });
         },
-        getProyect(id) {
-            return callApi(`/proyectos/${id}`);
+        getProduct(id) {
+            return callApi(`/productos/${id}`);
         },
-        findProyect(name){
-            return callApi(`/proyectos/${name}`);
+        findProduct(name){
+            return callApi(`/productos/${name}`);
         }
     },
     usuarios: {
@@ -70,7 +74,37 @@ const api = {
             return callApi(`/usuarios/${id}`);
         },
     },
+    ventas: {
+        list() {
+            return callApi("/ventas");
+        },
+        create(venta) {
+            console.log(JSON.stringify(venta));
+            return callApi("/ventas", {
+                method: "POST", 
+                body: JSON.stringify(venta),
+            });
+        },
     
+        getVentas(id) {
+            return callApi(`/ventas/${id}`);
+        },
+        edit(venta) {
+            return callApi(`/ventas/${venta._id}`, {
+              method: "PUT",
+              body: JSON.stringify(venta),
+            });
+        },
+        delete(id){
+            return callApi(`/ventas/${id}`, {
+                method: "DELETE",
+            });
+        },
+        findVenta(name){
+            return callApi(`/ventas/${name}`);
+        },
+
+    },
     user: {
         getUser() {
             return callApi("/user");
