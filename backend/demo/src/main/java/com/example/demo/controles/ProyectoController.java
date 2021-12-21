@@ -75,3 +75,4 @@ public class ProyectoController {
         proyectoRepository.delete(proyecto);
 
  }
+}
