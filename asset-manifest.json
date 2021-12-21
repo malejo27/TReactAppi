@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/malejo27/TReactAppi/static/css/main.7b60cfb0.chunk.css",
+    "main.js": "/malejo27/TReactAppi/static/js/main.9be9b0b5.chunk.js",
+    "main.js.map": "/malejo27/TReactAppi/static/js/main.9be9b0b5.chunk.js.map",
+    "runtime-main.js": "/malejo27/TReactAppi/static/js/runtime-main.0901b4dc.js",
+    "runtime-main.js.map": "/malejo27/TReactAppi/static/js/runtime-main.0901b4dc.js.map",
+    "static/css/2.0a9ec390.chunk.css": "/malejo27/TReactAppi/static/css/2.0a9ec390.chunk.css",
+    "static/js/2.c29c3271.chunk.js": "/malejo27/TReactAppi/static/js/2.c29c3271.chunk.js",
+    "static/js/2.c29c3271.chunk.js.map": "/malejo27/TReactAppi/static/js/2.c29c3271.chunk.js.map",
+    "static/js/3.672e39d5.chunk.js": "/malejo27/TReactAppi/static/js/3.672e39d5.chunk.js",
+    "static/js/3.672e39d5.chunk.js.map": "/malejo27/TReactAppi/static/js/3.672e39d5.chunk.js.map",
+    "index.html": "/malejo27/TReactAppi/index.html",
+    "static/css/2.0a9ec390.chunk.css.map": "/malejo27/TReactAppi/static/css/2.0a9ec390.chunk.css.map",
+    "static/css/main.7b60cfb0.chunk.css.map": "/malejo27/TReactAppi/static/css/main.7b60cfb0.chunk.css.map",
+    "static/js/2.c29c3271.chunk.js.LICENSE.txt": "/malejo27/TReactAppi/static/js/2.c29c3271.chunk.js.LICENSE.txt",
+    "static/media/car.7b0957cd.svg": "/malejo27/TReactAppi/static/media/car.7b0957cd.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.0901b4dc.js",
+    "static/css/2.0a9ec390.chunk.css",
+    "static/js/2.c29c3271.chunk.js",
+    "static/css/main.7b60cfb0.chunk.css",
+    "static/js/main.9be9b0b5.chunk.js"
+  ]
+}
