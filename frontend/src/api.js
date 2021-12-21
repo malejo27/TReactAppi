@@ -7,7 +7,7 @@ const callApi = async (url, options = {}) => {
     };
     
     const response = await fetch(
-        "http://localhost:8888" + url, options);
+        "https://treact-app.herokuapp.com" + url, options);
         // process.env.REACT_BACKEND_URL +url, options);
     const data = await response.json();
     return data;
